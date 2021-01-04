@@ -1,2 +1,0 @@
-# TESDA
-TESDA2020
