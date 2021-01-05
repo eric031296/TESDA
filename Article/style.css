@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+body{
+	overflow-x: hidden;
+	font-family: "Oswald", sans-serif;
+}
+a{
+	text-decoration: none !important;
+}
+hr{
+	background-color: #fff;
+}
+
+/*Custom Class star*/
+.heading{
+	position: relative;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	color: deepskyblue;
+	text-shadow: 1px 1px 1px grey,
+				 1px 2px 1px grey,
+				 1px 3px 1px #333,
+				 1px 4px 1px #333,
+				 1px 5px 1px grey,
+				 1px 6px 1px grey,
+				 1px 18px 6px rgba(16, 16, 16, .4),
+				 1px 22px 10px rgba(16, 16, 16, .2),
+				 1px 25px 35px rgba(16, 16, 16, .2),
+				 1px 30px 60px rgba(16, 16, 16, .4);
+}
+.heading:after{
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -20px;
+	width: 150px;
+	height: 3px;
+	margin-left: -75px;
+	background-color: orange;
+}
+.scrollTop{
+	position: fixed;
+	bottom: 800px;
+	right: 40px;
+	width: 50px;
+	height: 50px;
+	background: #20c997 url(images/up.png);
+	background-size: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.5s;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 100000;
+}
+.scrollTop.active{
+	bottom: 40px;
+	visibility: visible;
+	opacity: 1;
+}
+/*Custom Class end*/
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	transition: 0.6s;
+	z-index: 1000;
+}
+header.sticky{
+	padding: 0 100px;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.navbar-brand{
+	font-weight: 800;
+	font-size: 2em;
+	color: #d71542 !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 1px #fff,
+				 1px 2px 1px #fff,
+				 1px 3px 1px #333,
+				 1px 4px 1px #333,
+				 1px 5px 1px #fff,
+				 1px 6px 1px #fff,
+				 1px 18px 6px rgba(16, 16, 16, .4),
+				 1px 22px 10px rgba(16, 16, 16, .2),
+				 1px 25px 35px rgba(16, 16, 16, .2),
+				 1px 30px 60px rgba(16, 16, 16, .4);
+}
+.nav-item{
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+	background-color: #d71542 !important;
+	transition: 0.5s;
+	color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+	color: #262626;
+	font-size: 16px;
+	padding: 5px 10px;
+}
+.navbar-toggler{
+	background-color: #fff;
+	outline: none !important;
+	border: 1px solid #7f7f7f;
+	border-radius: 0;
+}
+
+.home{
+	position: relative;
+	min-height: 100vh;
+	background: url(images/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding-top: 200px;
+}
+.home:before,
+.home:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 350px;
+	background: linear-gradient(#fff, transparent);
+}
+.home #detail{
+	position: relative;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,.7);
+	color: #fff;
+	box-shadow: 0 0 10px 10px rgba(255, 255, 255, .5);
+	padding: 10px 20px;
+}
+.home #detail h2{
+	font-size: 2.8em;
+	font-weight: 1000;
+	text-transform: uppercase;
+	color: #fff;
+}
+.home #detail p{
+	margin: 10px 0 0;
+	padding: 0;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: #fff;
+}
+.home #detail .btnD1{
+	display: inline-block;
+	margin: 1em 0 0;
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: 0.5s;
+}
+.home .social{
+	position: absolute;
+	top: 30%;
+	z-index: 1;
+} 
+.home .social ul{
+	transform: translate(-230px, 0);
+}
+.home .social ul li{
+	display: block;
+	margin: 5px;
+	padding: 10px;
+	background-color: #d71542;
+	border-radius: 0 30px 30px 0;
+	text-align: right;
+	width: 280px;
+	transition: all 1s;
+}
+.home .social ul li:hover{
+	transform: translate(100px, 0);
+	background-color: orange;
+}
+.home .social ul li:hover a{
+	color: #fff;
+}
+
+.home .social ul li:hover i{
+	color: deepskyblue;
+	background-color: #fff;
+	transition: all 1s;
+}
+.home .social ul li i{
+	margin-left: 10px;
+	background-color: #fff;
+	padding: 10px;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	border-radius: 50%;
+}
+.home .social ul li:nth-child(1) a i{
+	color: #3b5995 !important;
+	background-color: #fff;
+}
+.home .social ul li:nth-child(2) a i{
+	color: red;
+	background-color: #fff;
+}
+.home .social ul li:nth-child(3) a i{
+	color: deepskyblue;
+	background-color: #fff;
+}
+.home .social ul li:nth-child(4) a i{
+	color: maroon;
+	background-color: #fff;
+}
+
+
+/*About Section*/
+.about{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	padding: 100px 0;
+}
+.about img{
+	max-width: 350px;
+	height: 390px;
+}
+
+/*Our Blog*/
+.blog{
+	position: relative;
+	padding: 100px 0;
+	background-color: teal;
+}
+.post{
+	position: relative;
+	width: 100%;
+	margin-top: 30px;
+	background-color: #fff;
+	box-shadow: 0 0 10px 10px rgba(255, 255, 255, .5);
+	transition: .5s;
+}
+.post .imgBox{
+	height: 400px;
+	overflow: hidden;
+}
+.post .imgBox img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: .5s;
+}
+
+.post:hover .imgBox img{
+	transform: scale(1.5);
+}
+
+.post .content{
+	padding: 15px;
+	overflow: auto;
+}
+.post .content h1{
+	margin: 0;
+	padding: 0 0 10px;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+.post .btnD2,
+.post .btnD2:hover{
+	background-color: #262626;
+	color: #fff;
+	border-radius: 30px;
+	padding: 10px 20px;
+	float: right;
+}
+/*team section*/
+
+.team{
+	position: relative;
+	padding: 100px 0;
+	min-height: 100vh;
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(images/team.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.team .carousel-indicators{
+bottom: -60px;
+}
+.team .carousel-indicators li.active{
+	background: deepskyblue;
+}
+.team .carousel-indicators li{
+	border: deepskyblue;
+}
+.team .carousel-inner img{
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	background: rgba(255, 255, 255, .7);
+	border: 2px solid deepskyblue;
+	object-fit: cover;
+}
+
+.contact{
+	position: relative;
+	background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)), url(images/contact.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding: 100px 0;
+}
+.contact img{
+	max-width: 100%;
+	height: 450px;
+}
+.contact .logo-name{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.contact .logo-name h3{
+	position: absolute;
+	right: 1px;
+	top: 10%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+	color: #FBA832;
+	font-size: 3.5em;
+	font-weight: 700;
+	text-shadow: 1px 1px 1px #000,
+				 1px 2px 1px #000,
+				 1px 3px 1px #333,
+				 1px 4px 1px #333,
+				 1px 5px 1px brown,
+				 1px 6px 1px brown,
+				 1px 18px 6px rgba(0,0,0,.9),
+				 1px 22px 10px rgba(0,0,0,.9),
+				 1px 25px 35px rgba(0,0,0,.9),
+				 1px 30px 60px rgba(0,0,0,.9);
+
+}
+.form .inputBx{
+	margin-bottom: 20px;
+}
+.form .inputBx input{
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: 300;
+	border-bottom: 2px solid #fff;
+	
+}
+.form .inputBx textarea{
+	width: 100%;
+	height: 150px;
+	background-color: transparent;
+	border: none;
+	padding: 10px 0;
+	font-size: 18px;
+	font-weight: 300;
+	border-radius: 0;
+	border-bottom: 2px solid #fff;
+	resize: none;
+}
+.form .inputBx input::placeholder,
+.form .inputBx textarea::placeholder{
+	color: #fff;
+}
+.form .inputBx input[type="submit"]{
+	width: 150px;
+	color: #111;
+	background: #fff;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.footer{
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+}
+.footer .text{
+	font-size: 15px;
+	color: #fff;
+}
+
+@media (max-width: 991px) {
+	header{
+		padding: 20px 0;
+	}
+	header.sticky{
+		padding: 0 20px;
+	}
+	.navbar-collapse{
+		background-color: #fff;
+	}
+	.home{
+		height: 100vh;
+		padding: 150px 0;
+	}
+	.home #detail{
+		margin: 0 10px;
+	}
+	.home #detail h2{
+		font-size: 3em;
+	}
+	.home #detail p{
+		padding: 0 25px;
+	}
+	.form{
+		padding-top: 100px;
+	}
+	.contact .logo-name h3{
+		padding-top: 20px;
+		transform: rotate(360deg);
+		writing-mode: horizontal-tb;
+	}
+}
+
